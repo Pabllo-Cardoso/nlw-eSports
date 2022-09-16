@@ -1,0 +1,173 @@
+* { /* (*) seletor universal */
+    margin: 0; /* (criar espaco ao redor dos elementos) zerado na página */
+    padding: 0; /* (espaco ao redor do conteúdo) zerado na página */
+    box-sizing: border-box; /* (reset do css) do padrao do navegador */
+}
+
+body * { /* (*)seletor universal utilizado no corpo da página */
+    font-family: 'Inter', sans-serif; /* (fonte matriz) da página */
+    line-height: 160%; /* (altura) da linha */
+}
+
+body { /* elemento pai da estrutura da página */
+    background-image: url(./Imagens/background\ black.png); /* (imagem de fundo) da página */
+    background-position: top center; /* posicionada na parte (superior e centralizada) */
+    background-size: 100% auto; /* tamanho da imagem  e automatico nas margens */
+    background-repeat: no-repeat; /* imagem sem repeticao */
+    background-color: black; /* cor de fundo */
+}
+
+header { /* cabecalho da página */
+    margin-top: 32px; /* margem superior do cabecalho */
+    height: calc(120px + 32px); /* executa cálculos quando especifica os valores de propriedade */
+}
+
+header div { /* caixa dentro do cabecalho */
+    width: 120px;
+    margin: auto; /* margem automática de todos os lados */
+    background-image: linear-gradient(90deg, rgb(192, 126, 3) 0%, rgb(22, 129, 190) 100%); /* efeito degrade */
+    border-radius: 50%; /* borda arredondada */
+    display: flex; /*  caixa flexivel */
+    padding: 4px; /* preenchimento/espacamento de dentro para fora da caixa */
+    transition: transform .3s; /* transição de 3 segundos */
+}
+
+header div:hover { /*  caixa quando apontada ativa estilos do elemento */
+    transform: scale(1.1); /* define uma transformação que redimensiona um elemento */
+}
+
+header div img { /* imagem dentro da caixa */
+    width: 100%; /* largura da caixa */
+    border-radius: 50%; /* borda arredondada */
+}
+
+main { /* conteúdo principal dentro do do corpo */
+    max-width: 580px; /* (largura máxima da borda) da caixa = border-box*/
+    width: 90%; /* largura */
+    margin: 32px auto; /* margem de todos os lados */
+    display: grid; /*  Torna o elemento um grid container */
+    gap: 24px; /* espaçamento e a medianiz do chamador entre as linhas e colunas */
+}
+
+section { /* marcar as seções de conteúdo de uma página */
+    color: white; /* cor dos elementos */
+    background-image: linear-gradient(90deg, rgb(192, 126, 3) 0%, rgb(22, 129, 190)  100%); /* efeito degrade */
+    padding-top: 4px; /* espaçamento superior */
+    border-radius: 10px; /* borda arredondada */
+}
+
+section div { /* caixa da seção de conteúdo de uma página */
+    background-color: #2A2634; /* cor de fundo */
+    padding: 32px;  /* espaçamento interno */
+    padding-top: 24px; /* espaçamento superior */
+    border-radius: 8px; /* borda arredondada */
+}
+
+section h2 { /* cabecalho h2 dentro da seção */
+    letter-spacing: -0.47px; /* (espaco) entre as letras*/
+}
+
+section p { /* parágrafo h2 dentro da seção */
+    letter-spacing: -0.18px; /* (espaco) entre as letras*/
+    color: #A1A1AA; /* cor */
+}
+
+ul { /* elemento pai da lista */
+    list-style: none; /* (limpa os pontos) do itens da lista */
+}
+
+section ul { /* seção dentro da lista*/
+    display: flex; /* (visualizacao) das caixas - div*/
+    flex-wrap: wrap; /* (limite da caixa) - direcionando os elementos para baixo*/
+    gap: 16px; /* funciona só com display flex*/
+    margin-top: 24px; /* margem superior */
+}
+
+section ul li { /* itens dentro da lista, dentro da seção  */
+    transition: transform .3s; /* transição de 3 segundos */
+}
+
+section ul li:hover { /* caixa quando apontada ativa estilos do elemento */
+    transform: scale(1.1); /* define uma transformação que redimensiona um elemento */
+}
+
+.games-list img { /* lista de imagens */
+    width: 90px; /* largura da caixa */
+    border-radius: 8px; /*arredondamento da borda*/
+}
+
+.channel-list img { /* lista de imagens */
+    width: 70px; /* largura da caixa*/
+    border-radius: 50%; /*arredondamento da borda*/
+    border: 1px solid #443E54; /* borda da caixa */
+}
+
+img { /* imagem dentro da caixa */
+    background-color: white; /* cor de fundo */
+    border-radius: 20px; /*arredondamento da borda*/
+}
+
+footer{ /* rodapé da página */
+    max-width: 580px; /* (largura máxima da borda) da caixa = border-box*/
+    width: 90%; /* largura  da caixa */
+    background-image: linear-gradient(90deg, rgb(192, 126, 3) 0%, rgb(22, 129, 190)  100%); /* efeito degrade */
+    margin: auto; /* margem */
+    padding: 5px; /* espaçamento interno */
+    padding-top: 5px; /* espaçamento superior */
+    font-size: 10px; /* tamanho da fonte */
+    color:  #ccc; /* cor da fonte */
+    text-align: center; /* texto alinhado no centro */
+    font-weight: bold; /* cor da fonte robusta */
+    border-radius: 2px; /*arredondamento da borda*/
+}
+
+/* animation */
+header div {
+    animation: fromtop .7s .2s backwards; /* animação superior */
+}
+
+main section {
+    animation: frombottom .7s backwards; /* animação inferior */
+}
+
+main section:nth-child(1) { /*  posição 1 em um grupo de elementos irmãos */
+    animation-delay: 0; /* intervalo da animação  */
+}
+
+main section:nth-child(2) { /*  posição 2 em um grupo de elementos irmãos */
+    animation-delay: .4s; /* intervalo da animação  */
+}
+
+main section:nth-child(3) { /*  posição 3 em um grupo de elementos irmãos */
+    animation-delay: .8s; /* intervalo da animação  */
+}
+
+footer {
+    animation: frombottom .7s backwards; /* animação inferior */
+    animation-delay: .13s; /* intervalo da animação  */
+}
+
+
+@keyframes fromtop { /* animação superior */
+    from { /* de */
+        opacity: 0; /* opacidade */
+        transform: translateY(-30px); /* eixo y de cima para baixo*/
+    }
+
+    to { /* para */
+        opacity: 1; /* opacidade */
+        transform: translateY(0); /* eixo y de cima para baixo*/
+    }
+}
+
+@keyframes frombottom { /* animação inferior */
+    from { /* de */
+        opacity: 0; /* opacidade */
+        transform: translateY(30px); /* eixo y de cima para baixo*/
+    }
+
+    to { /* para */
+        opacity: 1; /* opacidade */
+        transform: translateY(0); /* eixo y de cima para baixo*/
+    }
+}
